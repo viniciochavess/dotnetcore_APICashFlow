@@ -19,7 +19,7 @@ public class ExpensesController : ControllerBase
             var response = useCase.Execute(request);
             return Created(string.Empty, response); ;
         }
-        catch (Exception ex)
+        catch (ArgumentException ex)
         {
             return BadRequest(ex.Message);
         }
