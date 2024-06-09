@@ -23,6 +23,7 @@ public class ExpensesController : ControllerBase
         {
             return BadRequest(ex.Message);
         }
+        catch { return StatusCode(StatusCodes.Status500InternalServerError,"unknown error");}
        
     }
 
